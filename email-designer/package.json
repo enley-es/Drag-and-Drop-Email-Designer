@@ -1,6 +1,6 @@
 {
   "name": "@enley-es/ng-email-designer",
-  "version": "0.5.22",
+  "version": "0.5.26",
   "description": "Design responsive HTML emails that work in every email client. Fast and light weight.",
   "peerDependencies": {
     "@angular/common": "^15.2.0",
@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SendWithSES/Drag-and-Drop-Email-Designer.git"
+    "url": "git+https://github.com/enley-es/Drag-and-Drop-Email-Designer.git"
   },
   "keywords": [
     "Open source",
