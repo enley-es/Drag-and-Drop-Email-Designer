@@ -1,6 +1,6 @@
 {
-  "name": "@enley-es/ng-email-designer",
-  "version": "0.5.20",
+  "name": "ng-email-designer",
+  "version": "0.5.21",
   "description": "Design responsive HTML emails that work in every email client. Fast and light weight.",
   "peerDependencies": {
     "@angular/common": "^15.2.0",
@@ -35,5 +35,8 @@
   "bugs": {
     "url": "https://github.com/SendWithSES/Drag-and-Drop-Email-Designer/issues"
   },
-  "homepage": "https://designer.sendune.com"
+  "homepage": "https://designer.sendune.com",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
 }
