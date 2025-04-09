@@ -17,12 +17,17 @@ jobs:
           node-version: '18.18.x'
           registry-url: 'https://npm.pkg.github.com'
           scope: '@enley-es'
-      - run: npm ci
-      - run: npm install ng-packagr@15.2.2 --save-dev # Install the correct version of ng-packagr
-
-      - run: npx ng-packagr -p ng-package.json
+          name: Install dependencies
+          working-directory: email-designer
+          run: npm ci
+      - name: Install ng-packagr
+        working-directory: email-designer
+        run: npm install ng-packagr@15.2.2 --save-dev
+      - name: Build the package
+        working-directory: email-designer
+        run: npx ng-packagr -p ng-package.json
       - name: Publish
-        working-directory: ./dist/enley-angular-lib
+        working-directory: email-designer
         run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+            NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
