@@ -24,6 +24,7 @@ export class EmailToolbarButtonComponent {
   @Input() currentAlignment!: 'left' | 'center' | 'right';
 
   fontFamilyList: string[] = [
+    'Barlow','Quicksand',
     'Arial', 'Courier New',
     'Georgia', 'Tahoma', 'Trebuchet MS', 'Verdana'
   ]

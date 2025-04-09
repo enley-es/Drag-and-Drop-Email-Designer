@@ -13,8 +13,9 @@
     "ngx-sendune-editor": "^1.1.6",
     "suneditor": "^2.45.1"
   },
-  "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "ng-packagr": "^15.2.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

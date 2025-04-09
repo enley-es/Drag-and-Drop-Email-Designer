@@ -44,7 +44,7 @@ export class EmailToolbarFooterComponent {
       ["align"],
       ["link"],
     ],
-    font: ['Arial', 'Courier New', 'Georgia', 'Tahoma', 'Trebuchet MS', 'Verdana'],
+    font: ['Barlow','Quicksand','Arial', 'Courier New', 'Georgia', 'Tahoma', 'Trebuchet MS', 'Verdana'],
     //formats: ["h1", 'h2', "h3"],
     resizingBar: false,
     defaultTag: 'p',

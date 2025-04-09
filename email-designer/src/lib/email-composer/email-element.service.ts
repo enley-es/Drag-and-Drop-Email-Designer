@@ -191,6 +191,7 @@ export class EmailElementService {
     }
   }
   fontFamilyList: string[] = [
+    'Barlow','Quicksand',
     'Arial', 'Courier New',
     'Georgia', 'Tahoma', 'Trebuchet MS', 'Verdana'
   ];

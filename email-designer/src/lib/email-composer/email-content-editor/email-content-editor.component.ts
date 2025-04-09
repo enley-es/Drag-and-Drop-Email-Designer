@@ -44,7 +44,7 @@ export class EmailContentEditorComponent {
       // ["preview", "print"],
       // ["save", "template"],
     ],
-    font: ['Arial', 'Courier New', 'Georgia', 'Tahoma', 'Trebuchet MS', 'Verdana'],
+    font: ['Barlow','Quicksand','Arial', 'Courier New', 'Georgia', 'Tahoma', 'Trebuchet MS', 'Verdana'],
 
     formats: ["h1", 'h2', "h3"],
     defaultTag: 'h1',
@@ -70,7 +70,7 @@ export class EmailContentEditorComponent {
       //  ["formatBlock"],
       ["link"],
     ],
-    font: ['Arial', 'Courier New', 'Georgia', 'Tahoma', 'Trebuchet MS', 'Verdana'],
+    font: ['Barlow','Quicksand','Arial', 'Courier New', 'Georgia', 'Tahoma', 'Trebuchet MS', 'Verdana'],
     defaultTag: 'p',
     resizingBar: false,
     defaultStyle: 'font-size: 16px;font-family: Verdana', // Set your desired default font size here

@@ -111,7 +111,7 @@ export class Block implements BlockBean {
     constructor(block: Block) {
         {
             this.id = block.id;
-            this.type = block.type || '';
+            this.type = block.type;
             this.content = block.content || '';
             this.backgroundColor = block.backgroundColor || '';
             this.color = block.color || '';

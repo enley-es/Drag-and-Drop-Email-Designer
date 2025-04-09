@@ -62,7 +62,7 @@ export class EmailToolbarComponent {
   logoSubscription!: Subscription;
 
   selectedFontSize = '14px';
-  currentLogoAlignment: logoAlignment = logoAlignment.Center;
+  currentLogoAlignment: logoAlignment | 'center'  = logoAlignment.Center;
   logoAlignment = logoAlignment;
   footer!: Footer;
   unsubscribeColor!: any;
