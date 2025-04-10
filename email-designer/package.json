@@ -11,7 +11,7 @@
     "@ng-bootstrap/ng-bootstrap": "^14.2.0",
     "ngx-monaco-editor-v2": "^15.0.1",
     "ngx-sendune-editor": "^1.1.6",
-    "suneditor": "^2.45.1"
+    "@enley-es/ngx-suneditor": "1.1.5"
   },
   "devDependencies": {
     "ng-packagr": "^15.2.2"
