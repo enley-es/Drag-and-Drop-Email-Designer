@@ -5,16 +5,15 @@
   "peerDependencies": {
     "@angular/common": ">=15.0.0 <19.0.0",
     "@angular/core": ">=15.0.0 <19.0.0",
-    "@fortawesome/angular-fontawesome": "^0.12.0",
+    "@fortawesome/angular-fontawesome": "^0.13.0", 
     "@fortawesome/fontawesome-free": "^6.4.0",
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
-    "@ng-bootstrap/ng-bootstrap": "^14.2.0",
-    "ngx-monaco-editor-v2": "^15.0.1",
-    "ngx-sendune-editor": "^1.1.6",
+    "@ng-bootstrap/ng-bootstrap": "^15.0.0",
+    "ngx-monaco-editor-v2": "^16.0.0",
     "@enley-es/ngx-suneditor": "1.1.5"
   },
   "devDependencies": {
-    "ng-packagr": "^15.2.2"
+    "ng-packagr": "^16.2.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
