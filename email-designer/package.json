@@ -13,7 +13,7 @@
     "@enley-es/ngx-suneditor": "1.1.5"
   },
   "devDependencies": {
-    "ng-packagr": "^16.2.0"
+    "ng-packagr": "^19.2.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
