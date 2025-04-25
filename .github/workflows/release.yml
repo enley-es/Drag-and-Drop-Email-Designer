@@ -24,7 +24,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Install ng-packagr
         working-directory: email-designer
-        run: npm install ng-packagr@15.2.2 --save-dev
+        run: npm install ng-packagr@16.2.0 --save-dev
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Build the package
