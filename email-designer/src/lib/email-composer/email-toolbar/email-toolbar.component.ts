@@ -1,4 +1,6 @@
-import { debounceTime, Subscription } from 'rxjs';
+import { Subscription } from 'rxjs';
+import { debounceTime } from 'rxjs/operators';
+
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 
