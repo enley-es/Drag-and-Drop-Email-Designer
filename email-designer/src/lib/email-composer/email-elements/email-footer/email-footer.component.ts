@@ -12,7 +12,7 @@ import { ConstantsData } from '../../constants';
 export class EmailFooterComponent {
   @Input() footer!: Footer;
   footerSelected!: boolean
-  defaultBrands: any = this.emailElementService.initialElement.general.footer.brands;
+  defaultBrands: any;
   includeUnsubscribe!: any;
   defaultUnsubscribeColor = ConstantsData.defaultUnsubscribeColor;
 
@@ -20,8 +20,10 @@ export class EmailFooterComponent {
 
   ngOnInit() {
     this.emailElementService.footerVisibility$.subscribe(l => {
-      this.footerSelected = l
+      this.footerSelected = l;
     });
+
+    this.defaultBrands = this.emailElementService.initialElement.general.footer.brands;
 
     this.footer.brands = this.footer.brands.filter(brand => brand.link && brand.link?.trim() !== "");
   }

@@ -2,7 +2,7 @@ import { ChangeDetectorRef, Component, EventEmitter, Input, Output, SimpleChange
 import { SunEditorOptions } from 'suneditor/src/options';
 import plugins from 'suneditor/src/plugins'; // Import all offical available plugins
 import { TemplateBean } from '../../beans/templateBean';
-import { NgxSuneditorComponent } from 'ngx-sendune-editor';
+import { NgxSuneditorComponent } from '@enley-es/ngx-suneditor';
 import { handlePaste } from '../../helpers/utils';
 
 @Component({

@@ -3,7 +3,7 @@ import { EmailElementService } from '../email-element.service';
 import { SunEditorOptions } from 'suneditor/src/options';
 import plugins from 'suneditor/src/plugins'; // Import all offical available plugins
 import { BlockBean, BlockType } from '../models';
-import { NgxSuneditorComponent } from 'ngx-sendune-editor';
+import { NgxSuneditorComponent } from '@enley-es/ngx-suneditor';
 import { listsRegex } from '../constants';
 import { handlePaste } from '../../helpers/utils';
 
@@ -88,8 +88,8 @@ export class EmailContentEditorComponent {
   formatList: string[] = [
     'H1', 'H2', 'H3'
   ]
-  fontFamilyList: string[] = this.emailElementService.fontFamilyList
-  fontSizeList = this.emailElementService.fontSizeList
+  fontFamilyList: string[] = [];
+  fontSizeList: any[] = [];
   fontSizes: any = {
     'H1': '28px',
     'H2': '26px',
@@ -105,6 +105,9 @@ export class EmailContentEditorComponent {
       this.selectedFontSize = '28px';
       this.selectedFormat = 'H1';
     }
+
+    this.fontFamilyList = this.emailElementService.fontFamilyList;
+    this.fontSizeList = this.emailElementService.fontSizeList;
     if (this.bodyType === this.blockType.Text) {
       this.editorOptions = this.headerEditorOptions
     } else {
