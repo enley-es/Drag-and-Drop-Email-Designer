@@ -31,7 +31,7 @@ jobs:
         working-directory: email-designer
         run: npx ng-packagr -p ng-package.json
       - name: Publish
-        working-directory: email-designer
+        working-directory: email-designer/dist/email-designer
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
