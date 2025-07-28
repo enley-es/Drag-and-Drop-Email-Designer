@@ -27,6 +27,9 @@ export class EmailPreviewComponent {
     this.sanitizedPreviewContent = this.sanitized.bypassSecurityTrustHtml(
       this.previewContent
     );
+
+    console.log('Previey type from EnleyDesigner:', this.previewType);
+    console.log('SanitizedPreviewContent from EnleyDesigner:', this.sanitizedPreviewContent);
   }
 
   back() {
