@@ -28,7 +28,7 @@
     </div>
     <div class="email-preview-body html p-4 pb-5" *ngIf="previewType === 'html'"
         [ngStyle]="{'background-color': bgColor}">
-        <pre><code>{{previewContent}}</code></pre>
+        <pre><code [innerHTML]="sanitizedPreviewContent"></code></pre>
         <span class="copy-btn btn btn-light" (click)="copyHtml()">Copy</span>
     </div>
     <!-- Toggle View End-->
