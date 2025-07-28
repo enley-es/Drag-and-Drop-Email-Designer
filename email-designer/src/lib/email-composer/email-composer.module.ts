@@ -29,12 +29,14 @@ import { SanitizePipe } from './sanitize.pipe';
 import { EmailToolbarButtonComponent } from './email-toolbar-button/email-toolbar-button.component';
 import { EmailToolbarFooterComponent } from './email-toolbar-footer/email-toolbar-footer.component';
 import { NgbTypeaheadModule } from '@ng-bootstrap/ng-bootstrap';
+import { ThreeColumnComponent } from './email-elements/three-column/three-column.component';
 
 @NgModule({
   declarations: [
     EmailEditorComponent,
     EmailToolbarComponent,
     EmailPreviewComponent,
+    ThreeColumnComponent,
     TwoColumnComponent,
     OneColumnComponent,
     EmailComposerContainerComponent,
