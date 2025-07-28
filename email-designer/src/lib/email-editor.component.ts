@@ -23,6 +23,7 @@ export class EmailEditorComponent {
   @Output() imageUploadTriggered: EventEmitter<any> = new EventEmitter<any>();
   @Output() imageSelectionTriggered: EventEmitter<any> = new EventEmitter<any>();
   @Output() closeSlideabr: EventEmitter<any> = new EventEmitter<any>();
+  @Output() closePreview: EventEmitter<any> = new EventEmitter<any>();
 
   content: any = '';
   previewType = 'desktop';
@@ -63,6 +64,7 @@ export class EmailEditorComponent {
 
   hidePreview() {
     this.showPreviewPanel = false;
+    this.closePreview.emit(true);
   }
 
   showHtmlPreview() {

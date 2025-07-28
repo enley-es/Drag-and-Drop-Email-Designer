@@ -131,7 +131,8 @@ export class Block implements BlockBean {
 
 export enum StructureType {
     OneColumn = "1",
-    TwoColumn = "2"
+    TwoColumn = "2",
+    ThreeColumn = "3"
 }
 export enum BlockType {
     Text = "Text",

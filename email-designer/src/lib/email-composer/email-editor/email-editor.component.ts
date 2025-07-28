@@ -8,6 +8,7 @@ import { sampleEmailData } from '../sample-data';
   templateUrl: './email-editor.component.html',
   styleUrls: ['./email-editor.component.scss']
 })
+
 export class EmailEditorComponent {
   emailElements!: (EmailElements | any)
   data = sampleEmailData;

@@ -19,6 +19,10 @@
                             <app-two-column [structure]="s" [sIndex]="i"
                                 (twoClicked)="setSelectedIndex(i,$event)"></app-two-column>
                         </ng-container>
+                        <ng-container *ngIf="s.type === '3'">
+                            <app-three-column [structure]="s" [sIndex]="i"
+                                (threeClicked)="setSelectedIndex(i,$event)"></app-three-column>
+                        </ng-container>
                         <div *ngIf="selectedSIindex===i " class="structure-hover-box">
                             <span (click)="swapUpStucture(i)" *ngIf="!f"><i class="fa-solid fa-arrow-up"></i></span>
                             <span (click)="swapDownStucture(i)" *ngIf="!l"><i class="fa-solid fa-arrow-down"></i></span>

@@ -15,6 +15,14 @@
                     <span class="icon-text">Two Columns</span>
                 </div>
             </div>
+            <div class="col col-lg-12 col-xl-6 two-column flex-center" (click)="onThreeClick()">
+                <div class="icon-box">
+                    <div class="p-3 col-custom-border">
+                        <div class="splitter"></div>
+                    </div>
+                    <span class="icon-text">Three Columns</span>
+                </div>
+            </div>
         </div>
         <button *ngIf="isMobileView" class="close-btn" (click)="closeSidebar($event)">
             &#xD7;

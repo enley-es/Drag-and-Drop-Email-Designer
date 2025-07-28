@@ -23,6 +23,7 @@ export class EmailToolbarComponent {
 
   @Output() oneClicked = new EventEmitter<void>();
   @Output() twoClicked = new EventEmitter<void>();
+  @Output() threeClicked = new EventEmitter<void>();
   @Output() imageUploadTriggered = new EventEmitter<any>();
   @Output() imageSelectionTriggered = new EventEmitter<any>();
   @Output() closeSlideanel = new EventEmitter<any>();
@@ -186,6 +187,12 @@ export class EmailToolbarComponent {
   showNoSelectionError() {
     this.message.error('Please Select a column to insert Block', 'Error');
   }
+
+  onThreeClick() {
+    this.es.addStucture(StructureType.ThreeColumn)
+    this.threeClicked.emit();
+  }
+
   onTwoClick() {
     this.es.addStucture(StructureType.TwoColumn)
     this.twoClicked.emit();
