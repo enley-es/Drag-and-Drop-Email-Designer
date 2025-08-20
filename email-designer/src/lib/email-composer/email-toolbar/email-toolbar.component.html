@@ -15,7 +15,7 @@
                     <span class="icon-text">Two Columns</span>
                 </div>
             </div>
-            <div class="col col-lg-12 col-xl-6 two-column flex-center" (click)="onThreeClick()">
+            <!-- <div class="col col-lg-12 col-xl-6 two-column flex-center" (click)="onThreeClick()">
                 <div class="icon-box">
                     <div class="p-3 col-custom-border">
                         <div class="splitter splitter-first"></div>
@@ -23,7 +23,7 @@
                     </div>
                     <span class="icon-text">Three Columns</span>
                 </div>
-            </div>
+            </div> -->
         </div>
         <button *ngIf="isMobileView" class="close-btn" (click)="closeSidebar($event)">
             &#xD7;
@@ -59,6 +59,11 @@
             <div class="col icon-box" (click)="onDividerClick()">
                 <i class="icon fa-solid fa-minus"></i>
                 <h6 class="icon-text">Divider</h6>
+            </div>
+
+            <div class="col icon-box" (click)="onColorClick()">
+                <i class="icon fa-solid fa-paint-brush"></i>
+                <h6 class="icon-text">Color</h6>
             </div>
         </div>
     </div>

@@ -184,6 +184,7 @@ export class EmailToolbarComponent {
 
     this.headerContent = '<h1> </h1>';
   }
+
   showNoSelectionError() {
     this.message.error('Please Select a column to insert Block', 'Error');
   }
@@ -244,13 +245,21 @@ export class EmailToolbarComponent {
     }
     this.es.addBlockToStucture(BlockType.Divider)
   }
+
+  onColorClick() {
+    if (this.selectedCindex === -1) {
+      this.showNoSelectionError()
+      return;
+    }
+    this.es.setColorToStructure()
+  }
+
   updateBgColor() {
     this.es.updateBgColor(this.bgPickerValue)
 
   }
   updateContentBgColor() {
     this.es.updateContentBgColor(this.contentBgValue)
-
   }
   dividerBgChange() {
     this.es.editBlockContent(this.selectedSIindex, this.selectedCindex, this.selectedBIndex, 'color', this.dividerBgClrValue);

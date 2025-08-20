@@ -349,6 +349,16 @@ export class EmailElementService {
   getElements() {
     return this.emailElements$;
   }
+
+  setColorToStructure() {
+    const sIndex = this.selectedStructureIndex ? this.selectedStructureIndex : 0;
+    if (this.emailElements && this.emailElements.structures[sIndex]) {
+      this.emailElements.structures[sIndex].backgroundColor = '#d6d6d6';
+      this.emailElements$.next(this.emailElements);
+      this.contentUpdated$.next(true);
+    }
+  }
+
   addBlockToStucture(type: BlockType) {
     const sIndex = this.selectedStructureIndex ? this.selectedStructureIndex : 0;
     const cIndex = this.selectedStructureColumn;
