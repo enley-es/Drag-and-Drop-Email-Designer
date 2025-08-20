@@ -1,4 +1,4 @@
-<div class="col-2-parent structure-container">
+<div class="col-2-parent structure-container" [style.background-color]="structure.backgroundColor">
     <div class="structure-col" [class.selected]="selectedSIindex===sIndex && selectedCIndex===0"
         (click)="threeColumnClicked(0)">
         <ng-container *ngFor="let b of structure.blocks[0];let i=index; let f = first;let l = last">

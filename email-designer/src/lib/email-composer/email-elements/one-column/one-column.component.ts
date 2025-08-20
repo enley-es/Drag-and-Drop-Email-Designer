@@ -18,6 +18,7 @@ export class OneColumnComponent {
 
   }
   ngOnInit() {
+    console.log('one column structure: ', this.structure);
     this.es.selectedStructureIndex$.subscribe(i => this.selectedSIindex = i);
     this.es.selectedStructureColumn$.subscribe(i => this.selectedCindex = i);
   }

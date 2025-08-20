@@ -20,6 +20,7 @@ export class TwoColumnComponent {
 
   }
   ngOnInit() {
+    console.log('two column structure: ', this.structure);
     this.es.selectedStructureIndex$.subscribe(i => this.selectedSIindex = i);
     this.es.selectedStructureColumn$.subscribe(i => this.selectedCIndex = i);
   }

@@ -15,11 +15,12 @@ export class ThreeColumnComponent {
   threeColumnClicked(column: number) {
     this.threeClicked.emit(column);
   }
-  
+
   selectedSIindex!: number;
   selectedCIndex!: number;
   constructor(private es: EmailElementService) {}
   ngOnInit() {
+    console.log("three columnstructure: ", this.structure);
     this.es.selectedStructureIndex$.subscribe(
       (i) => (this.selectedSIindex = i)
     );
