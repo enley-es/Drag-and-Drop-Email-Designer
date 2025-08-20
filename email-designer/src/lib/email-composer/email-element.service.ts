@@ -1,248 +1,279 @@
-import { Injectable } from '@angular/core';
-import { Block, BlockBean, BlockType, Brand, EmailElements, Logo, Structure, StructureType } from './models';
-import { Observable, Subject } from 'rxjs';
-import { HttpClient, HttpHeaders, HttpRequest } from '@angular/common/http';
-import { ConstantsData } from './constants'
+import { Injectable } from "@angular/core";
+import {
+  Block,
+  BlockBean,
+  BlockType,
+  Brand,
+  EmailElements,
+  Logo,
+  Structure,
+  StructureType,
+} from "./models";
+import { Observable, Subject } from "rxjs";
+import { HttpClient, HttpHeaders, HttpRequest } from "@angular/common/http";
+import { ConstantsData } from "./constants";
 
 @Injectable({
-  providedIn: 'any'
+  providedIn: "any",
 })
 export class EmailElementService {
-  apiPath = '';
+  apiPath = "";
   initialElement = {
-    "structures": [
+    structures: [
       {
-        "type": "1",
-        "blocks": [
+        type: "1",
+        blocks: [
           [
             {
-              "type": "Image",
-              "content": "",
-              "backgroundColor": "",
-              "color": "",
-              "link": "",
-              "src": "",
-              "width": "",
-              "height": "",
-              "isSelected": false,
-              "font": "",
-              "fontSize": "",
-              "align": "",
-              "format": ""
+              type: "Image",
+              content: "",
+              backgroundColor: "",
+              color: "",
+              link: "",
+              src: "",
+              width: "",
+              height: "",
+              isSelected: false,
+              font: "",
+              fontSize: "",
+              align: "",
+              format: "",
             },
             {
-              "type": "Button",
-              "content": "",
-              "backgroundColor": "#EEEEEE",
-              "color": "#AAAAAA",
-              "link": "",
-              "src": "",
-              "width": "",
-              "height": "",
-              "isSelected": false,
-              "font": "Verdana",
-              "fontSize": "16px",
-              "align": "",
-              "format": ""
-            }
-          ]
+              type: "Button",
+              content: "",
+              backgroundColor: "#EEEEEE",
+              color: "#AAAAAA",
+              link: "",
+              src: "",
+              width: "",
+              height: "",
+              isSelected: false,
+              font: "Verdana",
+              fontSize: "16px",
+              align: "",
+              format: "",
+            },
+          ],
         ],
-        "backgroundColor": "",
-        "color": "",
-        "isSelected": false
+        backgroundColor: "",
+        color: "",
+        isSelected: false,
       },
       {
-        "type": "2",
-        "blocks": [
+        type: "2",
+        blocks: [
           [
             {
-              "type": "Image",
-              "content": "",
-              "backgroundColor": "",
-              "color": "",
-              "link": "",
-              "src": "",
-              "width": "",
-              "height": "",
-              "isSelected": false,
-              "font": "",
-              "fontSize": "",
-              "align": "",
-              "format": ""
+              type: "Image",
+              content: "",
+              backgroundColor: "",
+              color: "",
+              link: "",
+              src: "",
+              width: "",
+              height: "",
+              isSelected: false,
+              font: "",
+              fontSize: "",
+              align: "",
+              format: "",
             },
             {
-              "type": "Text",
-              "content": "",
-              "backgroundColor": "",
-              "color": "",
-              "link": "",
-              "src": "",
-              "width": "",
-              "height": "",
-              "isSelected": false,
-              "font": "Verdana",
-              "fontSize": "28px",
-              "align": "",
-              "format": "H1"
+              type: "Text",
+              content: "",
+              backgroundColor: "",
+              color: "",
+              link: "",
+              src: "",
+              width: "",
+              height: "",
+              isSelected: false,
+              font: "Verdana",
+              fontSize: "28px",
+              align: "",
+              format: "H1",
             },
             {
-              "type": "Body",
-              "content": "",
-              "backgroundColor": "",
-              "color": "",
-              "link": "",
-              "src": "",
-              "width": "",
-              "height": "",
-              "isSelected": false,
-              "font": "Verdana",
-              "fontSize": "16px",
-              "align": "",
-              "format": "P"
-            }
+              type: "Body",
+              content: "",
+              backgroundColor: "",
+              color: "",
+              link: "",
+              src: "",
+              width: "",
+              height: "",
+              isSelected: false,
+              font: "Verdana",
+              fontSize: "16px",
+              align: "",
+              format: "P",
+            },
           ],
           [
             {
-              "type": "Image",
-              "content": "",
-              "backgroundColor": "",
-              "color": "",
-              "link": "",
-              "src": "",
-              "width": "",
-              "height": "",
-              "isSelected": false,
-              "font": "",
-              "fontSize": "",
-              "align": "",
-              "format": ""
+              type: "Image",
+              content: "",
+              backgroundColor: "",
+              color: "",
+              link: "",
+              src: "",
+              width: "",
+              height: "",
+              isSelected: false,
+              font: "",
+              fontSize: "",
+              align: "",
+              format: "",
             },
             {
-              "type": "Text",
-              "content": "",
-              "backgroundColor": "",
-              "color": "",
-              "link": "",
-              "src": "",
-              "width": "",
-              "height": "",
-              "isSelected": false,
-              "font": "Verdana",
-              "fontSize": "28px",
-              "align": "",
-              "format": "H1"
+              type: "Text",
+              content: "",
+              backgroundColor: "",
+              color: "",
+              link: "",
+              src: "",
+              width: "",
+              height: "",
+              isSelected: false,
+              font: "Verdana",
+              fontSize: "28px",
+              align: "",
+              format: "H1",
             },
             {
-              "type": "Body",
-              "content": "",
-              "backgroundColor": "",
-              "color": "",
-              "link": "",
-              "src": "",
-              "width": "",
-              "height": "",
-              "isSelected": false,
-              "font": "Verdana",
-              "fontSize": "16px",
-              "align": "",
-              "format": "P"
-            }
-          ]
+              type: "Body",
+              content: "",
+              backgroundColor: "",
+              color: "",
+              link: "",
+              src: "",
+              width: "",
+              height: "",
+              isSelected: false,
+              font: "Verdana",
+              fontSize: "16px",
+              align: "",
+              format: "P",
+            },
+          ],
         ],
-        "backgroundColor": "",
-        "color": "",
-        "isSelected": false
-      }
+        backgroundColor: "",
+        color: "",
+        isSelected: false,
+      },
     ],
-    "general": {
-      "footer": {
-        "content": "",
-        "font": "Verdana",
-        "fontSize": "14px",
+    general: {
+      footer: {
+        content: "",
+        font: "Verdana",
+        fontSize: "14px",
         brands: [
           {
-            "prefix": "fab", "iconName": "x-twitter",
-            "icon": ConstantsData.twitterPath,
-            "src": ConstantsData.twitterSrc,
-            "svgTxt": ConstantsData.twitterSvg,
-            "link": ConstantsData.twitterLink,
-            "color": "#aaaaaa",
+            prefix: "fab",
+            iconName: "x-twitter",
+            icon: ConstantsData.twitterPath,
+            src: ConstantsData.twitterSrc,
+            svgTxt: ConstantsData.twitterSvg,
+            link: ConstantsData.twitterLink,
+            color: "#aaaaaa",
           },
           {
-            "prefix": "fab", "iconName": "github",
-            "icon": ConstantsData.gitHubPath,
-            "src": ConstantsData.gitHubSrc,
-            "svgTxt": ConstantsData.gitHubSvg,
-            "link": ConstantsData.gitHubLink,
-            "color": "#aaaaaa",
-          }
+            prefix: "fab",
+            iconName: "github",
+            icon: ConstantsData.gitHubPath,
+            src: ConstantsData.gitHubSrc,
+            svgTxt: ConstantsData.gitHubSvg,
+            link: ConstantsData.gitHubLink,
+            color: "#aaaaaa",
+          },
         ],
-        "unsubscribe": true,
+        unsubscribe: true,
         // "unsubscribeColor": "#EEEEEE",
       },
-      "logo": {
-        "src": "",
-        "link": "",
-        "align": "center"
+      logo: {
+        src: "",
+        link: "",
+        align: "center",
       },
-      "color": "#000000",
-      "background": "#EEEEEE",
-      "contentBackground": "#FFFFFF"
-    }
-  }
+      color: "#000000",
+      background: "#EEEEEE",
+      contentBackground: "#FFFFFF",
+    },
+  };
   fontFamilyList: string[] = [
-    'Barlow','Quicksand',
-    'Arial', 'Courier New',
-    'Georgia', 'Tahoma', 'Trebuchet MS', 'Verdana'
+    "Barlow",
+    "Quicksand",
+    "Arial",
+    "Courier New",
+    "Georgia",
+    "Tahoma",
+    "Trebuchet MS",
+    "Verdana",
   ];
   fontSizeList = [
     {
-      val: '9px', label: 9
+      val: "9px",
+      label: 9,
     },
     {
-      val: '10px', label: 10
+      val: "10px",
+      label: 10,
     },
     {
-      val: '11px', label: 11
+      val: "11px",
+      label: 11,
     },
     {
-      val: '12px', label: 12
+      val: "12px",
+      label: 12,
     },
     {
-      val: '14px', label: 14
+      val: "14px",
+      label: 14,
     },
     {
-      val: '16px', label: 16
+      val: "16px",
+      label: 16,
     },
     {
-      val: '18px', label: 18
+      val: "18px",
+      label: 18,
     },
     {
-      val: '20px', label: 20
+      val: "20px",
+      label: 20,
     },
     {
-      val: '22px', label: 22
+      val: "22px",
+      label: 22,
     },
     {
-      val: '24px', label: 24
+      val: "24px",
+      label: 24,
     },
     {
-      val: '26px', label: 26
+      val: "26px",
+      label: 26,
     },
     {
-      val: '28px', label: 28
+      val: "28px",
+      label: 28,
     },
     {
-      val: '36px', label: 36
+      val: "36px",
+      label: 36,
     },
     {
-      val: '48px', label: 48
+      val: "48px",
+      label: 48,
     },
     {
-      val: '72px', label: 72
-    }
+      val: "72px",
+      label: 72,
+    },
   ];
-  emailElements!: EmailElements// = this.initialElement;
+  emailElements!: EmailElements; // = this.initialElement;
   emailElements$: Subject<EmailElements> = new Subject<EmailElements>();
   selectedStructureIndex$: Subject<number> = new Subject<number>();
   selectedStructureColumn$: Subject<number> = new Subject<number>();
@@ -264,36 +295,40 @@ export class EmailElementService {
   selectedBrands: any[] = [];
   elementClickedStatus: Subject<boolean> = new Subject<boolean>();
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   setSelectedStructureIndex(index: number, resetLogoFooter = true) {
     this.selectedStructureIndex = index;
     this.selectedStructureIndex$.next(index);
     if (resetLogoFooter) {
       this.logoSelected$.next(false);
-      this.footerVisibility$.next(false)
+      this.footerVisibility$.next(false);
     }
   }
   setSelectedStructureColumn(index: number) {
     this.selectedStructureColumn = index;
     this.selectedStructureColumn$.next(index);
-
   }
-  setSelectedBlock(index: number, type: BlockType, sIndex: number, cIndex: number) {
+  setSelectedBlock(
+    index: number,
+    type: BlockType,
+    sIndex: number,
+    cIndex: number
+  ) {
     this.selectedBlockType = type;
     this.selectedBlockIndex = index;
-    this.setSelectedStructureIndex(sIndex)
-    this.setSelectedStructureColumn(cIndex)
+    this.setSelectedStructureIndex(sIndex);
+    this.setSelectedStructureColumn(cIndex);
     this.selectedBlockIndex$.next(index);
     this.selectedBlockType$.next(type);
 
     this.logoSelected$.next(false);
-    this.footerVisibility$.next(false)
+    this.footerVisibility$.next(false);
   }
   resetBlockSelection(onlyBlock = false) {
     if (!onlyBlock) {
       this.setSelectedStructureIndex(-1, false);
-      this.setSelectedStructureColumn(-1)
+      this.setSelectedStructureColumn(-1);
     }
     this.selectedBlockIndex$.next(-1);
     this.selectedBlockIndex = -1;
@@ -301,18 +336,18 @@ export class EmailElementService {
   }
   resetAllSelection() {
     this.setSelectedStructureIndex(-1, false);
-    this.setSelectedStructureColumn(-1)
+    this.setSelectedStructureColumn(-1);
     this.selectedBlockIndex$.next(-1);
     this.selectedBlockIndex = -1;
     this.selectedBlockType$.next(BlockType.Other);
-    this.footerVisibility$.next(false)
-    this.logoSelected$.next(false)
+    this.footerVisibility$.next(false);
+    this.logoSelected$.next(false);
   }
   addStucture(type: StructureType): void {
     if (!this.emailElements) {
       this.emailElements = this.initialElement;
     }
-    this.structureAdded$.next(this.emailElements.structures.length)
+    this.structureAdded$.next(this.emailElements.structures.length);
     this.emailElements.structures.push(this.addNewStucture(type));
     this.emailElements$.next(this.emailElements);
     this.contentUpdated$.next(true);
@@ -324,17 +359,21 @@ export class EmailElementService {
   }
 
   swapStucture(sIndex1: number, sIndex2: number) {
-    if (this.emailElements
-      && this.emailElements.structures[sIndex1]
-      && this.emailElements.structures[sIndex2]
+    if (
+      this.emailElements &&
+      this.emailElements.structures[sIndex1] &&
+      this.emailElements.structures[sIndex2]
     ) {
-      this.swapPositions(this.emailElements.structures, sIndex1, sIndex2)
+      this.swapPositions(this.emailElements.structures, sIndex1, sIndex2);
       this.emailElements$.next(this.emailElements);
       this.contentUpdated$.next(true);
     }
   }
   resetElements() {
-    this.emailElements = { general: { ...this.initialElement.general, isLoading: true }, structures: [] };
+    this.emailElements = {
+      general: { ...this.initialElement.general, isLoading: true },
+      structures: [],
+    };
     this.emailElements$.next({ ...this.emailElements });
     this.resetAllSelection();
   }
@@ -351,41 +390,64 @@ export class EmailElementService {
   }
 
   setColorToStructure(color: string) {
-    const sIndex = this.selectedStructureIndex ? this.selectedStructureIndex : 0;
-    if (this.emailElements && this.emailElements.structures[sIndex]) {
-      this.emailElements.structures[sIndex].backgroundColor = color;
+    const sIndex = this.selectedStructureIndex
+      ? this.selectedStructureIndex
+      : 0;
+    const currentStructure = this.emailElements.structures[sIndex];
+    if (this.emailElements && currentStructure) {
+      currentStructure.backgroundColor = color;
+      if (currentStructure.blocks && Array.isArray(currentStructure.blocks)) {
+        currentStructure.blocks.forEach((column) => {
+          if (Array.isArray(column)) {
+            column.forEach((block) => {
+              block.backgroundColor = color;
+            });
+          }
+        });
+      }
+
       this.emailElements$.next(this.emailElements);
       this.contentUpdated$.next(true);
     }
   }
 
   addBlockToStucture(type: BlockType) {
-    const sIndex = this.selectedStructureIndex ? this.selectedStructureIndex : 0;
+    const sIndex = this.selectedStructureIndex
+      ? this.selectedStructureIndex
+      : 0;
     const cIndex = this.selectedStructureColumn;
     if (this.emailElements && this.emailElements.structures[sIndex]) {
       if (!this.emailElements.structures[sIndex].blocks) {
-        this.emailElements.structures[sIndex].blocks = []
+        this.emailElements.structures[sIndex].blocks = [];
       }
       if (!this.emailElements.structures[sIndex].blocks?.length) {
-        this.emailElements.structures[sIndex].blocks?.push([])
+        this.emailElements.structures[sIndex].blocks?.push([]);
       }
-      if (cIndex === 1 && this.emailElements.structures[sIndex].blocks?.length < 2) {
-        this.emailElements.structures[sIndex].blocks[1] = []
+      if (
+        cIndex === 1 &&
+        this.emailElements.structures[sIndex].blocks?.length < 2
+      ) {
+        this.emailElements.structures[sIndex].blocks[1] = [];
       }
-      this.blockAdded$.next(this.emailElements.structures[sIndex].blocks[cIndex].length)
-      this.emailElements.structures[sIndex].blocks[cIndex]?.push(this.addNewElement(type))
+      this.blockAdded$.next(
+        this.emailElements.structures[sIndex].blocks[cIndex].length
+      );
+      this.emailElements.structures[sIndex].blocks[cIndex]?.push(
+        this.addNewElement(type)
+      );
       this.emailElements$.next(this.emailElements);
       this.contentUpdated$.next(true);
     }
   }
   deleteBlockInStucture(sIndex: number, cIndex: number, bIndex: number) {
     const structure = this.emailElements.structures[sIndex];
-    if (this.emailElements
-      && structure
-      && structure.blocks
-      && structure.blocks?.length
-      && structure.blocks[cIndex]
-      && structure.blocks[cIndex][bIndex]
+    if (
+      this.emailElements &&
+      structure &&
+      structure.blocks &&
+      structure.blocks?.length &&
+      structure.blocks[cIndex] &&
+      structure.blocks[cIndex][bIndex]
     ) {
       this.emailElements.structures[sIndex].blocks[cIndex].splice(bIndex, 1);
       this.emailElements$.next(this.emailElements);
@@ -394,35 +456,42 @@ export class EmailElementService {
   }
   getBlockDetails(sIndex: number, cIndex: number, bIndex: number) {
     const structure = this.emailElements.structures[sIndex];
-    if (this.emailElements
-      && structure
-      && structure.blocks
-      && structure.blocks?.length
-      && structure.blocks[cIndex]
-      && structure.blocks[cIndex][bIndex]
+    if (
+      this.emailElements &&
+      structure &&
+      structure.blocks &&
+      structure.blocks?.length &&
+      structure.blocks[cIndex] &&
+      structure.blocks[cIndex][bIndex]
     ) {
       return structure.blocks[cIndex][bIndex];
     }
     return null;
   }
 
-  swapBlockInStucture(sIndex: number, cIndex: number, bIndex1: number, bIndex2: number) {
+  swapBlockInStucture(
+    sIndex: number,
+    cIndex: number,
+    bIndex1: number,
+    bIndex2: number
+  ) {
     const structure = this.emailElements.structures[sIndex];
-    if (this.emailElements
-      && structure
-      && structure.blocks
-      && structure.blocks?.length
-      && structure.blocks[cIndex]
-      && structure.blocks[cIndex][bIndex1]
-      && structure.blocks[cIndex][bIndex2]
+    if (
+      this.emailElements &&
+      structure &&
+      structure.blocks &&
+      structure.blocks?.length &&
+      structure.blocks[cIndex] &&
+      structure.blocks[cIndex][bIndex1] &&
+      structure.blocks[cIndex][bIndex2]
     ) {
-      this.swapPositions(structure.blocks[cIndex], bIndex1, bIndex2)
+      this.swapPositions(structure.blocks[cIndex], bIndex1, bIndex2);
       this.emailElements$.next(this.emailElements);
       this.contentUpdated$.next(true);
     }
   }
   swapPositions(array: any[], a: number, b: number) {
-    [array[a], array[b]] = [array[b], array[a]]
+    [array[a], array[b]] = [array[b], array[a]];
   }
   addNewStucture(type: StructureType): Structure {
     if (type === StructureType.TwoColumn) {
@@ -435,46 +504,58 @@ export class EmailElementService {
     let block: Block;
     switch (type) {
       case BlockType.Text:
-        block = new Block({ type, font: 'Verdana', fontSize: '28px', format: 'H1' });
+        block = new Block({
+          type,
+          font: "Verdana",
+          fontSize: "28px",
+          format: "H1",
+        });
         break;
       case BlockType.Body:
-        block = new Block({ type, font: 'Verdana', fontSize: '16px', format: 'P' })
+        block = new Block({
+          type,
+          font: "Verdana",
+          fontSize: "16px",
+          format: "P",
+        });
         break;
       case BlockType.Image:
         block = new Block({ type });
         break;
       case BlockType.Video:
-        block = new Block({ type })
+        block = new Block({ type });
         break;
       case BlockType.Button:
-        block = new Block({ type, backgroundColor: ConstantsData.btnBgColorValue, color: ConstantsData.btnTxtColorValue, content: '', font: 'Verdana', fontSize: '16px', link: '' });
+        block = new Block({
+          type,
+          backgroundColor: ConstantsData.btnBgColorValue,
+          color: ConstantsData.btnTxtColorValue,
+          content: "",
+          font: "Verdana",
+          fontSize: "16px",
+          link: "",
+        });
         break;
       case BlockType.Divider:
-        block = new Block({ type, color: ConstantsData.dividerBgClrValue })
+        block = new Block({ type, color: ConstantsData.dividerBgClrValue });
         break;
       case BlockType.Other:
-        block = new Block({ type })
+        block = new Block({ type });
         break;
     }
     return block;
   }
 
   updateLogoContent(updatedData: Logo) {
-    if (
-      this.emailElements.general &&
-      this.emailElements.general.logo
-    ) {
-      const imageData = this.emailElements.general.logo
-      this.emailElements.general.logo = { ...imageData, ...updatedData }
+    if (this.emailElements.general && this.emailElements.general.logo) {
+      const imageData = this.emailElements.general.logo;
+      this.emailElements.general.logo = { ...imageData, ...updatedData };
       this.emailElements$.next(this.emailElements);
       this.contentUpdated$.next(true);
     }
   }
   updateLogoLink(link: string) {
-    if (
-      this.emailElements.general &&
-      this.emailElements.general.logo
-    ) {
+    if (this.emailElements.general && this.emailElements.general.logo) {
       this.emailElements.general.logo.link = link;
       this.emailElements$.next(this.emailElements);
       this.contentUpdated$.next(true);
@@ -482,10 +563,7 @@ export class EmailElementService {
   }
 
   updateLogoAltTxt(altTxt: string) {
-    if (
-      this.emailElements.general &&
-      this.emailElements.general.logo
-    ) {
+    if (this.emailElements.general && this.emailElements.general.logo) {
       this.emailElements.general.logo.altTxt = altTxt;
       this.emailElements$.next(this.emailElements);
       this.contentUpdated$.next(true);
@@ -500,19 +578,21 @@ export class EmailElementService {
     }
   }
 
-  updateLogoSize(updatedSizeType: string, updatedWidth: any, originalWidth: any) {
+  updateLogoSize(
+    updatedSizeType: string,
+    updatedWidth: any,
+    originalWidth: any
+  ) {
     if (this.emailElements.general && this.emailElements.general.logo) {
       this.emailElements.general.logo.width = updatedWidth || originalWidth;
-      this.emailElements.general.logo.sizeType = updatedSizeType || 'original';
+      this.emailElements.general.logo.sizeType = updatedSizeType || "original";
       this.emailElements$.next(this.emailElements);
       // this.contentUpdated$.next(sizeType !== updatedSizeType);
     }
   }
 
   updateBgColor(value: string) {
-    if (
-      this.emailElements.general
-    ) {
+    if (this.emailElements.general) {
       this.emailElements.general.background = value;
       this.emailElements$.next(this.emailElements);
       this.contentUpdated$.next(true);
@@ -520,26 +600,41 @@ export class EmailElementService {
   }
 
   updateContentBgColor(value: string) {
-    if (
-      this.emailElements.general
-    ) {
+    if (this.emailElements.general) {
       this.emailElements.general.contentBackground = value;
       this.emailElements$.next(this.emailElements);
       this.contentUpdated$.next(true);
     }
   }
-  editBlockContent(sIndex: number, cIndex: number, bIndex: number, property: string, value: string): void {
+  editBlockContent(
+    sIndex: number,
+    cIndex: number,
+    bIndex: number,
+    property: string,
+    value: string
+  ): void {
     const structure = this.emailElements.structures[sIndex];
     if (structure && structure.blocks && structure.blocks[cIndex]) {
-      this.emailElements.structures[sIndex].blocks[cIndex][bIndex][property] = value;
+      this.emailElements.structures[sIndex].blocks[cIndex][bIndex][property] =
+        value;
       this.emailElements$.next(this.emailElements);
       this.contentUpdated$.next(true);
     }
   }
 
-  updateImageVideoBlockContent(sIndex: number, cIndex: number, bIndex: number, updatedData: BlockBean): void {
+  updateImageVideoBlockContent(
+    sIndex: number,
+    cIndex: number,
+    bIndex: number,
+    updatedData: BlockBean
+  ): void {
     const structure = this.emailElements.structures[sIndex];
-    if (structure && structure.blocks && structure.blocks[cIndex] && structure.blocks[cIndex][bIndex]) {
+    if (
+      structure &&
+      structure.blocks &&
+      structure.blocks[cIndex] &&
+      structure.blocks[cIndex][bIndex]
+    ) {
       const imageData = structure.blocks[cIndex][bIndex];
       Object.assign(imageData, updatedData);
       // this.emailElements.structures[sIndex].blocks[cIndex][bIndex] = { ...imageData, ...updatedData }
@@ -550,32 +645,42 @@ export class EmailElementService {
 
   getBlockContent(sIndex: any, cIndex: any, bIndex: any) {
     const structure = this.emailElements.structures[sIndex];
-    if (structure && structure.blocks[cIndex] && structure.blocks[cIndex][bIndex]) {
-      return structure.blocks[cIndex][bIndex]
+    if (
+      structure &&
+      structure.blocks[cIndex] &&
+      structure.blocks[cIndex][bIndex]
+    ) {
+      return structure.blocks[cIndex][bIndex];
     } else {
-      return ''
+      return "";
     }
   }
 
   loadVideoJSON(id: any) {
-    return this.http.get<any>('https://vimeo.com/api/v2/video/' + id + '.json');
+    return this.http.get<any>("https://vimeo.com/api/v2/video/" + id + ".json");
   }
 
   isYouTubeUrl(videoUrl: string): boolean {
-    return videoUrl.includes('https://www.youtube.com/watch?v=') || videoUrl.includes('https://youtu.be/') || videoUrl.includes('https://www.youtube.com/shorts');
+    return (
+      videoUrl.includes("https://www.youtube.com/watch?v=") ||
+      videoUrl.includes("https://youtu.be/") ||
+      videoUrl.includes("https://www.youtube.com/shorts")
+    );
   }
 
   extractYouTubeVideoId(videoUrl: string): string | null {
-    const match = videoUrl.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|shorts\/|.*[?&]v=))([^\/&?]+)/);
+    const match = videoUrl.match(
+      /(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|shorts\/|.*[?&]v=))([^\/&?]+)/
+    );
     return match ? match[1] : null;
   }
 
   loadVimeoVideoJSON(id: any) {
-    return this.http.get<any>('https://vimeo.com/api/v2/video/' + id + '.json');
+    return this.http.get<any>("https://vimeo.com/api/v2/video/" + id + ".json");
   }
 
   checkYoutubeUrl(videoUrl: any) {
-    return this.http.get<any>(`https://youtube.com/oembed?url=${videoUrl}`)
+    return this.http.get<any>(`https://youtube.com/oembed?url=${videoUrl}`);
   }
 
   getVideoData(videoUrl: string, awsRegion: string) {
@@ -590,43 +695,58 @@ export class EmailElementService {
                 let thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
                 let image = new Image();
 
-                const minimalWidth = 120
-                const minimalHeight = 90
+                const minimalWidth = 120;
+                const minimalHeight = 90;
 
                 image.onload = () => {
-                  if (image.width === minimalWidth && image.height === minimalHeight) {
+                  if (
+                    image.width === minimalWidth &&
+                    image.height === minimalHeight
+                  ) {
                     thumbnailUrl = `https://img.youtube.com/vi/${videoId}/0.jpg`;
                     const image = new Image();
                     image.src = thumbnailUrl;
                     image.onload = () => {
-                      observer.next({ success: true, image: { src: thumbnailUrl, width: image.width, height: image.height } });
-                    }
+                      observer.next({
+                        success: true,
+                        image: {
+                          src: thumbnailUrl,
+                          width: image.width,
+                          height: image.height,
+                        },
+                      });
+                    };
                   } else {
-                    observer.next({ success: true, image: { src: thumbnailUrl, width: image.width, height: image.height } });
+                    observer.next({
+                      success: true,
+                      image: {
+                        src: thumbnailUrl,
+                        width: image.width,
+                        height: image.height,
+                      },
+                    });
                   }
                 };
 
                 image.src = thumbnailUrl;
-
               } else {
-                observer.next('')
+                observer.next("");
               }
             },
             error: (error: any) => {
               observer.error(error);
-            }
+            },
           });
         } else {
-          observer.next('');
+          observer.next("");
         }
-
-      } else if (videoUrl.indexOf('vimeo.com/') !== -1) {
-        let splitPos = videoUrl.indexOf('.com/');
+      } else if (videoUrl.indexOf("vimeo.com/") !== -1) {
+        let splitPos = videoUrl.indexOf(".com/");
         let videoId: any;
 
         if (splitPos !== -1) {
           let idAndParams = videoUrl.slice(splitPos + 5);
-          let paramPos = idAndParams.indexOf('#t');
+          let paramPos = idAndParams.indexOf("#t");
           if (paramPos !== -1) {
             videoId = idAndParams.slice(0, paramPos);
           } else {
@@ -638,27 +758,38 @@ export class EmailElementService {
           next: (data: any) => {
             if (data && data[0].thumbnail_large) {
               const image = new Image();
-              const thumbnailUrl = data[0].thumbnail_large + '.jpg';
+              const thumbnailUrl = data[0].thumbnail_large + ".jpg";
               image.src = thumbnailUrl;
               image.onload = () => {
-                observer.next({ success: true, image: { src: thumbnailUrl, width: image.width, height: image.height } });
-              }
+                observer.next({
+                  success: true,
+                  image: {
+                    src: thumbnailUrl,
+                    width: image.width,
+                    height: image.height,
+                  },
+                });
+              };
             } else {
-              observer.next('');
+              observer.next("");
             }
           },
           error: (error: any) => {
             observer.error(error);
-          }
+          },
         });
       } else {
-        observer.next('notValidUrl');
+        observer.next("notValidUrl");
       }
     });
   }
 
   generateUniqueId() {
-    return new Date().getTime().toString() + Math.floor(Math.random() * 1000).toString() + Math.floor(Math.random() * 1000).toString();
+    return (
+      new Date().getTime().toString() +
+      Math.floor(Math.random() * 1000).toString() +
+      Math.floor(Math.random() * 1000).toString()
+    );
   }
 
   onFooterEdit(footerContent: string) {
@@ -666,7 +797,7 @@ export class EmailElementService {
       this.emailElements = { ...this.initialElement }; // Initialize if not already
     }
     if (this.emailElements.general && this.emailElements.general.footer) {
-      this.emailElements.general.footer.content = footerContent
+      this.emailElements.general.footer.content = footerContent;
       this.emailElements$.next(this.emailElements);
       this.contentUpdated$.next(true);
     }
@@ -676,7 +807,7 @@ export class EmailElementService {
       this.emailElements = { ...this.initialElement }; // Initialize if not already
     }
     if (this.emailElements.general && this.emailElements.general.footer) {
-      this.emailElements.general.footer.font = font
+      this.emailElements.general.footer.font = font;
       this.emailElements$.next(this.emailElements);
       this.contentUpdated$.next(true);
     }
@@ -686,7 +817,7 @@ export class EmailElementService {
       this.emailElements = { ...this.initialElement }; // Initialize if not already
     }
     if (this.emailElements.general && this.emailElements.general.footer) {
-      this.emailElements.general.footer.fontSize = fontSize
+      this.emailElements.general.footer.fontSize = fontSize;
       this.emailElements$.next(this.emailElements);
       this.contentUpdated$.next(true);
     }
@@ -696,7 +827,7 @@ export class EmailElementService {
       this.emailElements = { ...this.initialElement }; // Initialize if not already
     }
     if (this.emailElements.general && this.emailElements.general.footer) {
-      this.emailElements.general.footer.unsubscribe = status
+      this.emailElements.general.footer.unsubscribe = status;
       this.emailElements$.next(this.emailElements);
       this.contentUpdated$.next(true);
     }
@@ -706,13 +837,16 @@ export class EmailElementService {
       this.emailElements = { ...this.initialElement }; // Initialize if not already
     }
     if (this.emailElements.general && this.emailElements.general.footer) {
-      this.emailElements.general.footer.unsubscribeColor = unsubscribeColor
+      this.emailElements.general.footer.unsubscribeColor = unsubscribeColor;
       this.emailElements$.next(this.emailElements);
       this.contentUpdated$.next(true);
     }
   }
 
-  updateOrAddBrandList(selectedBrand: Brand[] | null = null, brandData: any): void {
+  updateOrAddBrandList(
+    selectedBrand: Brand[] | null = null,
+    brandData: any
+  ): void {
     // this.initializeEmailElements();
     if (!this.emailElements) {
       this.emailElements = { ...this.initialElement };
@@ -726,7 +860,9 @@ export class EmailElementService {
       this.emailElements.general.footer.brands = this.selectedBrands;
     }
     if (brandData !== null) {
-      const brandToUpdate = this.emailElements.general.footer.brands.find(brand => brand.iconName === brandData.iconName);
+      const brandToUpdate = this.emailElements.general.footer.brands.find(
+        (brand) => brand.iconName === brandData.iconName
+      );
       if (brandToUpdate) {
         brandToUpdate.link = brandData.link;
         if (brandData.color) {
@@ -745,10 +881,10 @@ export class EmailElementService {
   }
   clearLogo() {
     this.emailElements.general.logo = {
-      "src": "",
-      "link": "",
-      "align": "center"
-    }
+      src: "",
+      link: "",
+      align: "center",
+    };
     this.emailElements$.next(this.emailElements);
     this.contentUpdated$.next(true);
   }
