@@ -390,13 +390,15 @@ export class EmailElementService {
   }
 
   setColorToStructure(color: string) {
-    const sIndex = this.selectedStructureIndex
-      ? this.selectedStructureIndex
-      : 0;
-    const currentStructure = this.emailElements.structures[sIndex];
-    if (this.emailElements && currentStructure) {
+    const sIndex = this.selectedStructureIndex ?? 0;
+    const emailElementsCopy = JSON.parse(JSON.stringify(this.emailElements));
+
+    const currentStructure = emailElementsCopy.structures[sIndex];
+
+    if (currentStructure) {
       currentStructure.backgroundColor = color;
-      if (currentStructure.blocks && Array.isArray(currentStructure.blocks)) {
+
+      if (Array.isArray(currentStructure.blocks)) {
         currentStructure.blocks.forEach((column) => {
           if (Array.isArray(column)) {
             column.forEach((block) => {
@@ -406,6 +408,8 @@ export class EmailElementService {
         });
       }
 
+      this.emailElements = emailElementsCopy;
+      console.log("Updated emailelements from EmailDesigner:", this.emailElements);
       this.emailElements$.next(this.emailElements);
       this.contentUpdated$.next(true);
     }
