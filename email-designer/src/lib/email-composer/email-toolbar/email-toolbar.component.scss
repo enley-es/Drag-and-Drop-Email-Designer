@@ -57,9 +57,12 @@
 }
 
 .color-selector-modal {
-  position: fixed;
-  top: 25vh;
-  left: 50%;
+  position: absolute;
+  width: 50%;
+  border: 1px solid #ccc;
+  background-color: white;
+  top: 280px;
+  left: 100px;
 }
 
 .colo-picker {
