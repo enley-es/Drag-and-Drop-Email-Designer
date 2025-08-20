@@ -247,6 +247,7 @@ export class EmailToolbarComponent {
   }
 
   onColorClick() {
+    console.log('onColorClick', this.selectedCindex);
     if (this.selectedCindex === -1) {
       this.showNoSelectionError()
       return;
