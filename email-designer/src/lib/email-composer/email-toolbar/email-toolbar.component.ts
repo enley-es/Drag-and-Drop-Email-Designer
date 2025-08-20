@@ -256,6 +256,11 @@ export class EmailToolbarComponent {
     this.es.setColorToStructure(this.structureBgValue)
   }
 
+  switchColorModal() {
+    this.isStructureColorModalActive = !this.isStructureColorModalActive;
+    console.log('isStructureColorModalActive: ', this.isStructureColorModalActive);
+  }
+
   updateBgColor() {
     this.es.updateBgColor(this.bgPickerValue)
 
