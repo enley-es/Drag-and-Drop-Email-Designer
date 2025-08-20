@@ -49,6 +49,7 @@ export class EmailToolbarComponent {
 
   bgPickerValue: any = ConstantsData.bgPickerValue;
   contentBgValue: any = ConstantsData.contentBgValue;
+  structureBgValue: string; 
   btnBgColorValue: any = ConstantsData.btnBgColorValue;
   btnTxtColorValue: any = ConstantsData.btnTxtColorValue;
   dividerBgClrValue: any = ConstantsData.dividerBgClrValue
@@ -74,6 +75,7 @@ export class EmailToolbarComponent {
   selectedSize: string = 'original';
   logoSizesData = logoTypesData;
   imageSrcStatus!: boolean;
+  isStructureColorModalActive = false;
 
   constructor(
     private es: EmailElementService,
@@ -247,12 +249,11 @@ export class EmailToolbarComponent {
   }
 
   onColorClick() {
-    console.log('onColorClick', this.selectedCindex);
     if (this.selectedCindex === -1) {
       this.showNoSelectionError()
       return;
     }
-    this.es.setColorToStructure()
+    this.es.setColorToStructure(this.structureBgValue)
   }
 
   updateBgColor() {

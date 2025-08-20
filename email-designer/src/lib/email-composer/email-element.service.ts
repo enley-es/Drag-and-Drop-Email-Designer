@@ -350,12 +350,10 @@ export class EmailElementService {
     return this.emailElements$;
   }
 
-  setColorToStructure() {
-    console.log('setColorToStructure', this.selectedStructureIndex);
+  setColorToStructure(color: string) {
     const sIndex = this.selectedStructureIndex ? this.selectedStructureIndex : 0;
     if (this.emailElements && this.emailElements.structures[sIndex]) {
-      this.emailElements.structures[sIndex].backgroundColor = '#d6d6d6';
-      console.log('emailElements: ', this.emailElements);
+      this.emailElements.structures[sIndex].backgroundColor = color;
       this.emailElements$.next(this.emailElements);
       this.contentUpdated$.next(true);
     }
