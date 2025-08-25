@@ -389,32 +389,6 @@ export class EmailElementService {
     return this.emailElements$;
   }
 
-  setColorToStructure(color: string) {
-    const sIndex = this.selectedStructureIndex ?? 0;
-    const emailElementsCopy = JSON.parse(JSON.stringify(this.emailElements));
-
-    const currentStructure = emailElementsCopy.structures[sIndex];
-
-    if (currentStructure) {
-      currentStructure.backgroundColor = color;
-
-      if (Array.isArray(currentStructure.blocks)) {
-        currentStructure.blocks.forEach((column) => {
-          if (Array.isArray(column)) {
-            column.forEach((block) => {
-              block.backgroundColor = color;
-            });
-          }
-        });
-      }
-
-      this.emailElements = emailElementsCopy;
-      console.log("Updated emailelements from EmailDesigner:", this.emailElements);
-      this.emailElements$.next(this.emailElements);
-      this.contentUpdated$.next(true);
-    }
-  }
-
   addBlockToStucture(type: BlockType) {
     const sIndex = this.selectedStructureIndex
       ? this.selectedStructureIndex
@@ -443,6 +417,7 @@ export class EmailElementService {
       this.contentUpdated$.next(true);
     }
   }
+
   deleteBlockInStucture(sIndex: number, cIndex: number, bIndex: number) {
     const structure = this.emailElements.structures[sIndex];
     if (
@@ -458,6 +433,7 @@ export class EmailElementService {
       this.contentUpdated$.next(true);
     }
   }
+
   getBlockDetails(sIndex: number, cIndex: number, bIndex: number) {
     const structure = this.emailElements.structures[sIndex];
     if (
@@ -610,6 +586,33 @@ export class EmailElementService {
       this.contentUpdated$.next(true);
     }
   }
+
+    setColorToStructure(color: string) {
+    const sIndex = this.selectedStructureIndex ?? 0;
+    const emailElementsCopy = JSON.parse(JSON.stringify(this.emailElements));
+
+    const currentStructure = emailElementsCopy.structures[sIndex];
+
+    if (currentStructure) {
+      currentStructure.backgroundColor = color;
+
+      if (Array.isArray(currentStructure.blocks)) {
+        currentStructure.blocks.forEach((column) => {
+          if (Array.isArray(column)) {
+            column.forEach((block) => {
+              block.backgroundColor = color;
+            });
+          }
+        });
+      }
+
+      this.emailElements = emailElementsCopy;
+
+      this.emailElements$.next(this.emailElements);
+      this.contentUpdated$.next(true);
+    }
+  }
+
   editBlockContent(
     sIndex: number,
     cIndex: number,
