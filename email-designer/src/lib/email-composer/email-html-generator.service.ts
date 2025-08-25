@@ -363,9 +363,11 @@ export class EmailHtmlGeneratorService {
             </table>
     `;
   }
+
   getStructure(structure: Structure, contentBgColor: string) {
     let structureHtml = "";
 
+    console.log("structure", structure);
     if (
       structure.blocks &&
       structure.blocks.length &&
@@ -375,7 +377,7 @@ export class EmailHtmlGeneratorService {
       if (structure.type === "1") {
         structureHtml += `<tr>
         <td style="background-color: ${
-          structure.blocks[0][0].backgroundColor || "transparent"
+          structure.backgroundColor || "transparent"
         }; padding: 0 20px;">`;
         for (const block of structure.blocks[0]) {
           structureHtml += this.getBlock(block, 1);
@@ -384,7 +386,7 @@ export class EmailHtmlGeneratorService {
       } else if (structure.type === "2") {
         structureHtml += `<tr>
                     <td align="center" valign="top" style="font-size:0; padding: 0 10px; background-color: ${
-                      structure.blocks[0][0].backgroundColor || "transparent"
+                      structure.backgroundColor || "transparent"
                     };">
                         <!--[if mso]>
                         <table role="presentation" border="0" cellspacing="0" cellpadding="0" width="660">
