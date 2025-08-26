@@ -268,7 +268,7 @@ export class EmailHtmlGeneratorService {
         <td>
         <![endif]-->
     
-            <div style="max-width: 680px; margin: 0 auto;overflow: auto;
+            <div style="max-width: 90%; margin: 0 auto;overflow: auto;
             border-left: 5px solid ${bgColor};
             border-right: 5px solid ${bgColor};" class="email-container">
                 <!--[if mso]>
