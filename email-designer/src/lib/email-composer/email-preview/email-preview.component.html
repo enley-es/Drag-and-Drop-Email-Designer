@@ -23,7 +23,7 @@
     <!-- Side by side View End -->
     <!-- Toggle View -->
     <div class="email-preview-body d-flex" *ngIf="previewType !== 'html'"
-        [ngStyle]="isPlainText ? {'background-color': '#FFFFFF'} : {'background-color': bgColor}">
+        [ngStyle]="isPlainText ? {'background-color': '#EEEEEE'} : {'background-color': bgColor}">
         <iframe #iframe2 [src]="blobUrl | sanitize" (load)="onLoad()"></iframe>
     </div>
     <div class="email-preview-body html p-4 pb-5" *ngIf="previewType === 'html'"

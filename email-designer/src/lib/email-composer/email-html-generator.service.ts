@@ -177,7 +177,7 @@ export class EmailHtmlGeneratorService {
         margin: 0px;
     }
     .email-text-content p {
-      font-size: 16px;
+      font-size: 15px;
       /* color: #333; */
       margin: 0px;
     }
@@ -269,9 +269,7 @@ export class EmailHtmlGeneratorService {
         <td>
         <![endif]-->
     
-            <div style="max-width: 90%; margin: 0 auto;overflow: auto;
-            border-left: 5px solid ${bgColor};
-            border-right: 5px solid ${bgColor};" class="email-container">
+            <div style="max-width: 90%; margin: 0 auto;overflow: auto;" class="email-container">
                 <!--[if mso]>
                 <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="680">
                 <tr>
@@ -780,6 +778,7 @@ export class EmailHtmlGeneratorService {
         }; 
         font-size: ${block.fontSize ? block.fontSize : "16px"};
         text-decoration: none; 
+        text-transform: uppercase;
         font-style: normal;
         font-weight: bold;
         padding: 12px 25px;
@@ -804,7 +803,7 @@ export class EmailHtmlGeneratorService {
       line-height:120%;
       margin:0;
       text-decoration:none;
-      text-transform:none;
+      text-transform: uppercase;
       padding: 10px 25px;
       mso-padding-alt:0px;
       border-radius:14px;
