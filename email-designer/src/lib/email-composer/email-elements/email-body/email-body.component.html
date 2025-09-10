@@ -1,6 +1,6 @@
 <div class="body-block email-text-block">
     <div *ngIf="hasText(block.content); else emptyBlock">
-        <div [ngStyle]="{ 'font-family': this.block.font || 'Verdana', 'font-size': this.block.fontSize || '16px' }"
+        <div [ngStyle]="{ 'font-family': this.block.font || 'Barlow, sans-serif, serif, EmojiFont', 'font-size': this.block.fontSize || '15px' }"
             [innerHTML]="block.content | sanitize : 'html'"></div>
     </div>
     <ng-template #emptyBlock>

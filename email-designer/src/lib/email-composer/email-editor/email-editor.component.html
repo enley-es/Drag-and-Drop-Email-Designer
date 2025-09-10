@@ -8,7 +8,7 @@
             <div *ngIf="emailElements.general.isLoading" class="loader-template">
             </div>
             <div class="email-inner-container" [ngStyle]="{'background-color':emailElements.general.contentBackground}">
-                <app-email-logo [logo]="emailElements.general.logo"></app-email-logo>
+                <!-- <app-email-logo [logo]="emailElements.general.logo"></app-email-logo> -->
                 <ng-container *ngFor="let s of emailElements.structures;let i=index; let f = first;let l = last">
                     <div class="structure-main-container" [class.selected]="selectedSIindex===i" id="structure-{{i}}">
                         <ng-container *ngIf="s.type === '1'">

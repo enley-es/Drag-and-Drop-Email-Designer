@@ -1,11 +1,19 @@
 <div class="text-block email-text-block">
-    <div *ngIf="hasText(block.content); else emptyBlock">
-        <div [ngStyle]="{'font-family':this.block.font?this.block.font:'Verdana','font-size':this.block.fontSize?this.block.fontSize:'28px'}"
-            [innerHTML]="block.content | sanitize : 'html'"></div>
+  <div *ngIf="hasText(block.content); else emptyBlock">
+    <div
+      [ngStyle]="{
+        'font-family': this.block.font
+          ? this.block.font
+          : 'Barlow, sans-serif, serif, EmojiFont',
+        'font-size': this.block.fontSize ? this.block.fontSize : '21px',
+        margin: '0 5px 40px'
+      }"
+      [innerHTML]="block.content | sanitize : 'html'"
+    ></div>
+  </div>
+  <ng-template #emptyBlock>
+    <div class="empty-block header-content email-text-no-content">
+      {{ ismobileView ? "Add Header" : "Click to add Header" }}
     </div>
-    <ng-template #emptyBlock>
-        <div class="empty-block header-content email-text-no-content">
-            {{ismobileView ? "Add Header":"Click to add Header"}}
-        </div>
-    </ng-template>
+  </ng-template>
 </div>
