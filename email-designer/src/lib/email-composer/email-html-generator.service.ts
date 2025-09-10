@@ -780,7 +780,6 @@ export class EmailHtmlGeneratorService {
         }; 
         font-size: ${block.fontSize ? block.fontSize : "16px"};
         text-decoration: none; 
-        display: block; 
         font-style: normal;
         font-weight: bold;
         padding: 12px 25px;
@@ -795,7 +794,6 @@ export class EmailHtmlGeneratorService {
     } else {
       btnContent = `<p 
       style="
-      display:inline-block;
       background:${block.backgroundColor};
       color:${block.color};
       font-family: ${
@@ -807,7 +805,7 @@ export class EmailHtmlGeneratorService {
       margin:0;
       text-decoration:none;
       text-transform:none;
-      padding:10px 25px;
+      padding: 10px 25px;
       mso-padding-alt:0px;
       border-radius:14px;
       border: none;
@@ -818,7 +816,7 @@ export class EmailHtmlGeneratorService {
           style="margin: auto;${tdAlignStyle}">
           <tr>
               <td class="button-td button-td-primary"  ${tAlign}
-                  style="border-radius: 14px; padding: 0 40px 10%; background: ${block.backgroundColor};${tdAlignStyle}">
+                  style="border-radius: 14px; padding: 0 40px 10%; ${tdAlignStyle}">
                   ${btnContent}
               </td>
           </tr>
