@@ -59,7 +59,7 @@ export class EmailHtmlGeneratorService {
                 table-layout: fixed !important;
                 margin: 0 auto !important;
             }
-            .email-center-table > tbody > tr:last-child > td { padding-bottom: 20px; }
+
             img {
                 -ms-interpolation-mode: bicubic;
             }
@@ -115,6 +115,7 @@ export class EmailHtmlGeneratorService {
             }
     `;
   }
+
   getStyles() {
     return `
     body {
@@ -367,7 +368,6 @@ export class EmailHtmlGeneratorService {
   getStructure(structure: Structure, contentBgColor: string) {
     let structureHtml = "";
 
-    console.log("structure", structure);
     if (
       structure.blocks &&
       structure.blocks.length &&
@@ -451,6 +451,7 @@ export class EmailHtmlGeneratorService {
 
     return structureHtml;
   }
+
   getLogo(logo: Logo) {
     const logoText = `
     <img src="${logo.src}" width="${
@@ -477,6 +478,7 @@ export class EmailHtmlGeneratorService {
       </td>
     </tr>`;
   }
+
   getFooter(footer: Footer, isPreview: boolean) {
     let brandsText = ``;
     if (footer.brands && footer.brands.length) {
@@ -549,6 +551,7 @@ export class EmailHtmlGeneratorService {
             </table>
     `;
   }
+
   getBrand(brand: Brand, isPreview: boolean) {
     if (!brand.link || (!isPreview && !brand.src)) {
       return "";
@@ -614,7 +617,7 @@ export class EmailHtmlGeneratorService {
     style="margin: auto;width:100%;">
     <tr>`;
     const addCellContent = (content: string) => {
-      blockHtml += `<td style="padding: 0; ${tdAlign}">${content}</td>`;
+      blockHtml += `<td ${tdAlign}">${content}</td>`;
     };
     switch (block.type) {
       case BlockType.Text:
@@ -646,7 +649,7 @@ export class EmailHtmlGeneratorService {
     return blockHtml;
   }
   getDivider(block: BlockBean) {
-    return `<p style="border-top:solid 2px ${block.color};font-size:1px;margin:0 auto;width:100%"></p>`;
+    return `<p style="border-top:solid 2px ${block.color};font-size:1px;margin:0 auto;width:100%; padding: 20px 10%;"></p>`;
   }
 
   getText(block: BlockBean) {
@@ -656,7 +659,7 @@ export class EmailHtmlGeneratorService {
         <table role="presentation" cellspacing="0" cellpadding="0" border="0"
         style="margin: auto;width: 100%;">
           <tr>
-            <td class="email-text-content" style="font-family: ${this.defaultFont};">
+            <td class="email-text-content" style="font-family: ${this.defaultFont}; padding: 0 40px 10%;">
             ${block.content}
             </td>
           </tr>
@@ -665,6 +668,7 @@ export class EmailHtmlGeneratorService {
     }
     return text;
   }
+
   getBody(block: BlockBean) {
     let text = "";
     if (block.content) {
@@ -672,7 +676,7 @@ export class EmailHtmlGeneratorService {
         <table role="presentation" cellspacing="0" cellpadding="0" border="0"
         style="margin: auto;width: 100%;">
           <tr>
-            <td class="email-text-content" style="font-family: ${this.defaultFont};">
+            <td class="email-text-content" style="font-family: ${this.defaultFont}; padding: 0 40px 10%;">
             ${block.content}
             </td>
           </tr>
@@ -681,6 +685,7 @@ export class EmailHtmlGeneratorService {
     }
     return text;
   }
+
   getImage(block: BlockBean, cols: number) {
     let imageText = "";
     if (block.src) {
@@ -714,6 +719,7 @@ export class EmailHtmlGeneratorService {
 
     return imageText;
   }
+
   getVideo(block: BlockBean, cols: number) {
     let imageText = "";
     if (block.src) {
@@ -778,8 +784,8 @@ export class EmailHtmlGeneratorService {
         font-style: normal;
         font-weight: bold;
         padding: 12px 25px;
-        border: 0px solid rgb(65, 65, 65);
-        border-radius: 3px;
+        border: none;
+        border-radius: 14px;
         line-height: 120%;
         cursor:pointer;
         ">
@@ -803,7 +809,8 @@ export class EmailHtmlGeneratorService {
       text-transform:none;
       padding:10px 25px;
       mso-padding-alt:0px;
-      border-radius:3px;
+      border-radius:14px;
+      border: none;
       ">${block.content}</p>`;
     }
     return `
@@ -811,13 +818,14 @@ export class EmailHtmlGeneratorService {
           style="margin: auto;${tdAlignStyle}">
           <tr>
               <td class="button-td button-td-primary"  ${tAlign}
-                  style="border-radius: 4px; background: ${block.backgroundColor};${tdAlignStyle}">
+                  style="border-radius: 14px; padding: 0 40px 10%; background: ${block.backgroundColor};${tdAlignStyle}">
                   ${btnContent}
               </td>
           </tr>
       </table>
     `;
   }
+
   getFontFamily(font: string) {
     let fontFamily = `'${font}',sans-serif`;
     if (font === "Georgia" || font === "Courier New") {
@@ -825,6 +833,7 @@ export class EmailHtmlGeneratorService {
     }
     return fontFamily;
   }
+
   getPainTextHTML(emailContent: EmailElements, isPreview = false) {
     const bgColor = ConstantsData.bgPickerValue;
     const contentBgColor = ConstantsData.contentBgValue;
