@@ -378,14 +378,14 @@ export class EmailHtmlGeneratorService {
         structureHtml += `<tr>
         <td style="background-color: ${
           structure.backgroundColor || "transparent"
-        }; padding: 10px 20px;">`;
+        };">`;
         for (const block of structure.blocks[0]) {
           structureHtml += this.getBlock(block, 1);
         }
         structureHtml += `</td></tr>`;
       } else if (structure.type === "2") {
         structureHtml += `<tr>
-                    <td align="center" valign="top" style="font-size:0; padding: 10px 20px; background-color: ${
+                    <td align="center" valign="top" style="font-size:0; background-color: ${
                       structure.backgroundColor || "transparent"
                     };">
                         <!--[if mso]>

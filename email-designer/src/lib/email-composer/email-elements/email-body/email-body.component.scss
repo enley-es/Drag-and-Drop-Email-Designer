@@ -1,23 +1,29 @@
 ::ng-deep {
-    .structure-container {
-        cursor: pointer;
-        position: relative;
-        overflow: visible;
+  .structure-container {
+    cursor: pointer;
+    position: relative;
+    overflow: visible;
 
-        .structure-hover-box {
-            position: absolute;
-            top: 0;
-            left: -65px;
+    .structure-hover-box {
+      position: absolute;
+      top: 0;
+      left: -65px;
 
-            > span {
-                display: inline-block;
-                margin: 2px;
-            }
-        }
+      > span {
+        display: inline-block;
+        margin: 2px;
+      }
     }
+  }
 
-    .email-text-block p {
-        font-size: 16px !important;
-        color: #333;
-    }
+  .email-text-block {
+    padding: 0 10% 40px 10%;
+    box-sizing: border-box;
+    font-family: Barlow, sans-serif, serif, EmojiFont !important;
+  }
+
+  .email-text-block p {
+    font-size: 16px !important;
+    color: #333;
+  }
 }

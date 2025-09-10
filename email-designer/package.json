@@ -1,6 +1,6 @@
 {
   "name": "@enley-es/ng-email-designer",
-  "version": "0.5.55",
+  "version": "0.5.56",
   "description": "Design responsive HTML emails that work in every email client. Fast and light weight.",
   "peerDependencies": {
     "@angular/common": "^18.0.0",
