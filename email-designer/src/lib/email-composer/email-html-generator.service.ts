@@ -657,7 +657,7 @@ export class EmailHtmlGeneratorService {
         <table role="presentation" cellspacing="0" cellpadding="0" border="0"
         style="margin: auto;width: 100%;">
           <tr>
-            <td class="email-text-content" style="font-family: ${this.defaultFont}; padding: 0 10% 40px;">
+            <td class="email-text-content" style="font-family: ${this.defaultFont}; padding-bottom: 40px;">
             ${block.content}
             </td>
           </tr>
@@ -674,7 +674,7 @@ export class EmailHtmlGeneratorService {
         <table role="presentation" cellspacing="0" cellpadding="0" border="0"
         style="margin: auto;width: 100%;">
           <tr>
-            <td class="email-text-content" style="font-family: ${this.defaultFont}; padding: 0 10% 40px;">
+            <td class="email-text-content" style="font-family: ${this.defaultFont}; padding-bottom: 40px;">
             ${block.content}
             </td>
           </tr>
@@ -815,7 +815,7 @@ export class EmailHtmlGeneratorService {
           style="margin: auto;${tdAlignStyle}">
           <tr>
               <td class="button-td button-td-primary"  ${tAlign}
-                  style="border-radius: 14px; padding: 0 10% 40px; ${tdAlignStyle}">
+                  style="border-radius: 14px; padding-bottom: 40px; ${tdAlignStyle}">
                   ${btnContent}
               </td>
           </tr>
