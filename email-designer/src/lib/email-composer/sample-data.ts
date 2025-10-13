@@ -36,7 +36,7 @@ export const sampleEmailData = {
                         "color": "#333333",
                         "content": "Sample Button",
                         "backgroundColor": "#c54949",
-                        "font": 'Verdana',
+                        "font": 'Barlow, sans-serifx',
                         "fontSize": '16px',
                         "align": 'center',
                         "link": 'cv.me'

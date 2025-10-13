@@ -32,7 +32,7 @@ export class PlainTextComponent {
     // formats: ["h1", 'h2', "h3"],
     // defaultTag: 'h3',
     resizingBar: false,
-    defaultStyle: 'font-size: 14px; font-family: Barlow, sans-serif, serif, EmojiFont', // Set your desired default font size here
+    defaultStyle: 'font-size: 14px; font-family: Barlow, sans-serif', // Set your desired default font size here
     linkProtocol: '', // Set the default protocol for links,
     linkTargetNewWindow: true,
   };

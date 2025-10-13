@@ -48,7 +48,7 @@ export class EmailToolbarFooterComponent {
     //formats: ["h1", 'h2', "h3"],
     resizingBar: false,
     defaultTag: 'p',
-    defaultStyle: 'font-size: 14px;font-family: Barlow, sans-serif, serif, EmojiFont', // Set your desired default font size here
+    defaultStyle: 'font-size: 14px;font-family: Barlow, sans-serif', // Set your desired default font size here
     linkProtocol: '', // Set the default protocol for links
     linkNoPrefix: false,
     linkTargetNewWindow: true,
@@ -66,7 +66,7 @@ export class EmailToolbarFooterComponent {
   height!: number;
   userData: any = {};
 
-  selectedFont: any = 'Barlow, sans-serif, serif, EmojiFont';
+  selectedFont: any = 'Barlow, sans-serif';
   selectedFontSize: any = '14px';
 
   fontFamilyList: string[];
