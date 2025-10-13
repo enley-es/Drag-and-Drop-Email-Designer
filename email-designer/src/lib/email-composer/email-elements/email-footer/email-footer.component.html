@@ -14,18 +14,18 @@
     </div>
     <div class="email-footer-content">
         <ng-container *ngIf="footer.content;else emptyContent">
-            <div [ngStyle]="{'font-family':footer.font?footer.font:'Verdana','font-size':footer.fontSize?footer.fontSize:'14px'}"
+            <div [ngStyle]="{'font-family':footer.font?footer.font:'Barlow, sans-serif','font-size':footer.fontSize?footer.fontSize:'14px'}"
                 [innerHTML]="footer.content  | sanitize : 'html'">
             </div>
         </ng-container>
         <ng-template #emptyContent>
             <div
-                [ngStyle]="{'font-family':footer.font?footer.font:'Verdana','font-size':footer.fontSize?footer.fontSize:'14px'}">
+                [ngStyle]="{'font-family':footer.font?footer.font:'Barlow, sans-serif','font-size':footer.fontSize?footer.fontSize:'14px'}">
                 Click here to add footer text.
             </div>
         </ng-template>
     </div>
-    <div [ngStyle]="{'font-family':footer.font?footer.font:'Verdana',
+    <div [ngStyle]="{'font-family':footer.font?footer.font:'Barlow, sans-serif',
     'font-size':footer.fontSize?footer.fontSize:'14px',
     'color':footer.unsubscribeColor?footer.unsubscribeColor:defaultUnsubscribeColor}" class="email-footer-unsub"
         *ngIf="footer && footer.unsubscribe">{{'{{Unsubscribe}}'}}</div>

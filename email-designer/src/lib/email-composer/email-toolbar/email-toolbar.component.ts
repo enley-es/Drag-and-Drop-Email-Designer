@@ -41,7 +41,7 @@ export class EmailToolbarComponent {
   footerContent = '';
   selectedBlock!: BlockBean;
   isFooterVisible = false;
-  fontName: any = 'Verdana';
+  fontName: any = 'Barlow, sans-serif';
   fontSizeCount: any = '16';
   btnAlign: any = 'center'
   selectedBrands: any;

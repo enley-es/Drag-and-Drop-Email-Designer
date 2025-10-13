@@ -14,7 +14,7 @@ import { ConstantsData } from "./constants";
   providedIn: "root",
 })
 export class EmailHtmlGeneratorService {
-  defaultFont = "Verdana,sans-serif";
+  defaultFont = "Barlow, sans-serif";
   unsubscribePath = `/unsubscribe`;
   constructor() {}
 

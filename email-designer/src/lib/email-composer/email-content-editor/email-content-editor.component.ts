@@ -49,7 +49,7 @@ export class EmailContentEditorComponent {
     formats: ["h1", 'h2', "h3"],
     defaultTag: 'h1',
     resizingBar: false,
-    defaultStyle: 'font-size: 28px;font-family: Verdana', // Set your desired default font size here
+    defaultStyle: 'font-size: 28px;font-family: Barlow, sans-serif', // Set your desired default font size here
     linkProtocol: '', // Set the default protocol for links
     linkTargetNewWindow: true,
     attributesWhitelist: {
@@ -73,7 +73,7 @@ export class EmailContentEditorComponent {
     font: ['Barlow','Quicksand','Arial', 'Courier New', 'Georgia', 'Tahoma', 'Trebuchet MS', 'Verdana'],
     defaultTag: 'p',
     resizingBar: false,
-    defaultStyle: 'font-size: 15px; font-family: "Barlow", sans-serif;', // Set your desired default font size here
+    defaultStyle: 'font-size: 15px; font-family: Barlow, sans-serif;', // Set your desired default font size here
     linkProtocol: '', // Set the default protocol for links
     linkTargetNewWindow: true,
     attributesWhitelist: {
