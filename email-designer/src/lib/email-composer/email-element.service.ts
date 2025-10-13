@@ -49,7 +49,7 @@ export class EmailElementService {
               width: "",
               height: "",
               isSelected: false,
-              font: "Verdana",
+              font: "Barlow, sans-serif, serif, EmojiFont",
               fontSize: "16px",
               align: "",
               format: "",
@@ -89,7 +89,7 @@ export class EmailElementService {
               width: "",
               height: "",
               isSelected: false,
-              font: "Verdana",
+              font: "Barlow, sans-serif, serif, EmojiFont",
               fontSize: "28px",
               align: "",
               format: "H1",
@@ -104,7 +104,7 @@ export class EmailElementService {
               width: "",
               height: "",
               isSelected: false,
-              font: "Verdana",
+              font: "Barlow, sans-serif, serif, EmojiFont",
               fontSize: "16px",
               align: "",
               format: "P",
@@ -136,7 +136,7 @@ export class EmailElementService {
               width: "",
               height: "",
               isSelected: false,
-              font: "Verdana",
+              font: "Barlow, sans-serif, serif, EmojiFont",
               fontSize: "28px",
               align: "",
               format: "H1",
@@ -151,7 +151,7 @@ export class EmailElementService {
               width: "",
               height: "",
               isSelected: false,
-              font: "Verdana",
+              font: "Barlow, sans-serif, serif, EmojiFont",
               fontSize: "16px",
               align: "",
               format: "P",
@@ -166,7 +166,7 @@ export class EmailElementService {
     general: {
       footer: {
         content: "",
-        font: "Verdana",
+        font: "Barlow, sans-serif, serif, EmojiFont",
         fontSize: "14px",
         brands: [
           {
@@ -202,7 +202,7 @@ export class EmailElementService {
     },
   };
   fontFamilyList: string[] = [
-    "Barlow",
+    "Barlow, sans-serif, serif, EmojiFont",
     "Quicksand",
     "Arial",
     "Courier New",
@@ -486,7 +486,7 @@ export class EmailElementService {
       case BlockType.Text:
         block = new Block({
           type,
-          font: "Verdana",
+          font: "Barlow, sans-serif, serif, EmojiFont",
           fontSize: "28px",
           format: "H1",
         });
@@ -494,7 +494,7 @@ export class EmailElementService {
       case BlockType.Body:
         block = new Block({
           type,
-          font: "Verdana",
+          font: "Barlow, sans-serif, serif, EmojiFont",
           fontSize: "16px",
           format: "P",
         });
@@ -511,7 +511,7 @@ export class EmailElementService {
           backgroundColor: ConstantsData.btnBgColorValue,
           color: ConstantsData.btnTxtColorValue,
           content: "",
-          font: "Verdana",
+          font: "Barlow, sans-serif, serif, EmojiFont",
           fontSize: "16px",
           link: "",
         });
