@@ -44,7 +44,7 @@ export class EmailContentEditorComponent {
       // ["preview", "print"],
       // ["save", "template"],
     ],
-    font: ['Barlow','Quicksand','Arial', 'Courier New', 'Georgia', 'Tahoma', 'Trebuchet MS', 'Verdana'],
+    font: ['Barlow, sans-serif','Quicksand','Arial', 'Courier New', 'Georgia', 'Tahoma', 'Trebuchet MS', 'Verdana'],
 
     formats: ["h1", 'h2', "h3"],
     defaultTag: 'h1',
