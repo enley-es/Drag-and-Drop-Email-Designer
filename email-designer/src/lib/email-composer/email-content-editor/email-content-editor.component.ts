@@ -70,7 +70,7 @@ export class EmailContentEditorComponent {
       //  ["formatBlock"],
       ["link"],
     ],
-    font: ['Barlow','Quicksand','Arial', 'Courier New', 'Georgia', 'Tahoma', 'Trebuchet MS', 'Verdana'],
+    font: ['Barlow, sans-serif','Quicksand','Arial', 'Courier New', 'Georgia', 'Tahoma', 'Trebuchet MS', 'Verdana'],
     defaultTag: 'p',
     resizingBar: false,
     defaultStyle: 'font-size: 15px; font-family: Barlow, sans-serif;', // Set your desired default font size here
@@ -82,7 +82,7 @@ export class EmailContentEditorComponent {
   };
   editorOptions!: SunEditorOptions;
 
-  selectedFont: any = 'Barlow'
+  selectedFont: any = 'Barlow, sans-serif';
   selectedFontSize: any = '15px';
   selectedFormat: any = 'P';
   formatList: string[] = [
