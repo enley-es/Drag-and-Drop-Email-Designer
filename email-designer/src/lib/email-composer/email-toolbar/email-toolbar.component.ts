@@ -178,9 +178,8 @@ export class EmailToolbarComponent {
         //   // this.emailElements.general.footer.brands = this.es.initialElement.general.footer.brands
         // }
         // this.includeUnsubscribe = this.footer.unsubscribe ? this.footer.unsubscribe : this.es.initialElement.general.footer.unsubscribe;
-        this.includeUnsubscribe = this.footer.unsubscribe;
-        this.unsubscribeColor = this.footer.unsubscribeColor ? this.footer.unsubscribeColor : ConstantsData.defaultUnsubscribeColor;
-
+        // this.includeUnsubscribe = this.footer.unsubscribe;
+        // this.unsubscribeColor = this.footer.unsubscribeColor ? this.footer.unsubscribeColor : ConstantsData.defaultUnsubscribeColor;
       }
     });
 
