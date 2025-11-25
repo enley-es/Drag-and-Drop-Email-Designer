@@ -44,7 +44,7 @@ export class EmailToolbarComponent {
   fontName: any = 'Barlow, sans-serif';
   fontSizeCount: any = '16';
   btnAlign: any = 'center'
-  selectedBrands: any;
+  selectedBrands = []
   includeUnsubscribe: any;
 
   bgPickerValue: any = ConstantsData.bgPickerValue;
@@ -168,15 +168,15 @@ export class EmailToolbarComponent {
             }
           });
         }
-        const selectedBrandsLength = this.emailElements.general.footer.brands;
-        if (selectedBrandsLength.length > 0) {
-          const selectedBrands = this.emailElements.general.footer.brands;
-          this.selectedBrands = selectedBrands.filter(brand => brand.link?.trim());
-        } else {
-          this.selectedBrands = [];
-          // this.selectedBrands = this.es.initialElement.general.footer.brands;
-          // this.emailElements.general.footer.brands = this.es.initialElement.general.footer.brands
-        }
+        // const selectedBrandsLength = this.emailElements.general.footer.brands;
+        // if (selectedBrandsLength.length > 0) {
+        //   const selectedBrands = this.emailElements.general.footer.brands;
+        //   this.selectedBrands = selectedBrands.filter(brand => brand.link?.trim());
+        // } else {
+        //   this.selectedBrands = [];
+        //   // this.selectedBrands = this.es.initialElement.general.footer.brands;
+        //   // this.emailElements.general.footer.brands = this.es.initialElement.general.footer.brands
+        // }
         // this.includeUnsubscribe = this.footer.unsubscribe ? this.footer.unsubscribe : this.es.initialElement.general.footer.unsubscribe;
         this.includeUnsubscribe = this.footer.unsubscribe;
         this.unsubscribeColor = this.footer.unsubscribeColor ? this.footer.unsubscribeColor : ConstantsData.defaultUnsubscribeColor;
