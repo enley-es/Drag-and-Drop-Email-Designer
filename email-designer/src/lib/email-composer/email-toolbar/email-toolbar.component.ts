@@ -160,7 +160,7 @@ export class EmailToolbarComponent {
       if (this.emailElements) {
         this.isFooterVisible = visibility;
         this.footer = this.emailElements.general.footer;
-        this.footerContent = this.emailElements.general.footer.content;
+        // this.footerContent = this.emailElements.general.footer.content;
         if (this.isFooterVisible) {
           setTimeout(() => {
             if (this.toolbarFooter) {
