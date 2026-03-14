@@ -48,17 +48,17 @@ yarn add @enley-es/ng-email-designer
 
 ### Peer Dependencies
 
-This library requires Angular 19 and the following peer dependencies:
+This library requires Angular 20 and the following peer dependencies:
 
 ```
-@angular/common: ^19.0.0
-@angular/core: ^19.0.0
+@angular/common: ^20.0.0
+@angular/core: ^20.0.0
 @fortawesome/angular-fontawesome: ^0.16.0
 @fortawesome/fontawesome-free: ^6.4.0
 @fortawesome/free-brands-svg-icons: ^6.4.2
-@ng-bootstrap/ng-bootstrap: ^18.0.0
-ngx-monaco-editor-v2: ^19.0.0
-@enley-es/ngx-suneditor: ^2.0.0
+@ng-bootstrap/ng-bootstrap: ^19.0.0
+ngx-monaco-editor-v2: ^20.0.0
+@enley-es/ngx-suneditor: ^3.0.0
 ```
 
 ## Image Handling
