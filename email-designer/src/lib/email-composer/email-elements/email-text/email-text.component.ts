@@ -3,6 +3,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { BlockBean } from '../../models';
 
 @Component({
+  standalone: false,
   selector: 'app-email-text',
   templateUrl: './email-text.component.html',
   styleUrls: ['./email-text.component.scss']

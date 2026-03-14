@@ -3,6 +3,7 @@ import { Structure } from '../../models';
 import { EmailElementService } from '../../email-element.service';
 
 @Component({
+  standalone: false,
   selector: 'app-one-column',
   templateUrl: './one-column.component.html',
   styleUrls: ['./one-column.component.scss']

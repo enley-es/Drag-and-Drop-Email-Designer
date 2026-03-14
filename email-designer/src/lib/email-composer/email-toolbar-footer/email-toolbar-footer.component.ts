@@ -10,6 +10,7 @@ import { BlockType, Brand, Footer } from '../models';
 import { EmailElementService } from '../email-element.service';
 
 @Component({
+  standalone: false,
   selector: 'app-email-toolbar-footer',
   templateUrl: './email-toolbar-footer.component.html',
   styleUrls: ['./email-toolbar-footer.component.scss']

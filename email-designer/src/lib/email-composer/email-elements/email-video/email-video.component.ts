@@ -3,6 +3,7 @@ import { BlockBean } from '../../models';
 import { ConstantsData } from '../../constants';
 
 @Component({
+  standalone: false,
   selector: 'app-email-video',
   templateUrl: './email-video.component.html',
   styleUrls: ['./email-video.component.scss']

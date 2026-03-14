@@ -2,6 +2,7 @@ import { ChangeDetectorRef, Component, EventEmitter, Input, Output, SimpleChange
 // import { LoaderService } from 'src/app/shared/services/loader.service';
 
 @Component({
+  standalone: false,
   selector: 'app-email-html-editor',
   templateUrl: './email-html-editor.component.html',
   styleUrls: ['./email-html-editor.component.scss']

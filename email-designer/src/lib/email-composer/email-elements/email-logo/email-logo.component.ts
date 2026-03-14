@@ -3,6 +3,7 @@ import { EmailElementService } from '../../email-element.service';
 import { Logo } from '../../models';
 
 @Component({
+  standalone: false,
   selector: 'app-email-logo',
   templateUrl: './email-logo.component.html',
   styleUrls: ['./email-logo.component.scss']

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
+  standalone: false,
   selector: 'app-emails-content',
   templateUrl: './email-content.component.html',
   styleUrls: ['./email-content.component.scss']

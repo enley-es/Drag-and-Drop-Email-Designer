@@ -8,6 +8,7 @@ import { listsRegex } from '../constants';
 import { handlePaste } from '../../helpers/utils';
 
 @Component({
+  standalone: false,
   selector: 'app-email-content-editor',
   templateUrl: './email-content-editor.component.html',
   styleUrls: ['./email-content-editor.component.scss']

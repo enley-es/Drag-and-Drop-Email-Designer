@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ConstantsData } from '../constants';
 
 @Component({
+  standalone: false,
   selector: 'app-email-preview',
   templateUrl: './email-preview.component.html',
   styleUrls: ['./email-preview.component.scss'],

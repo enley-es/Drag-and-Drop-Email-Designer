@@ -1,6 +1,7 @@
 import { Component, Input, SimpleChanges, ViewChild } from '@angular/core';
 
 @Component({
+  standalone: false,
   selector: 'app-editor-html-output-view',
   templateUrl: './editor-html-output-view.component.html',
   styleUrls: ['./editor-html-output-view.component.scss']

@@ -5,6 +5,7 @@ import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
 @Component({
+  standalone: false,
   selector: 'app-block',
   templateUrl: './block.component.html',
   styleUrls: ['./block.component.scss']

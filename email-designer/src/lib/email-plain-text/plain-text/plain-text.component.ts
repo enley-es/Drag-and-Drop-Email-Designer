@@ -6,6 +6,7 @@ import { NgxSuneditorComponent } from '@enley-es/ngx-suneditor';
 import { handlePaste } from '../../helpers/utils';
 
 @Component({
+  standalone: false,
   selector: 'app-plain-text',
   templateUrl: './plain-text.component.html',
   styleUrls: ['./plain-text.component.scss']

@@ -4,6 +4,7 @@ import { EmailElements } from '../models';
 import { Subscription } from 'rxjs';
 
 @Component({
+  standalone: false,
   selector: 'app-email-composer-container',
   templateUrl: './email-composer-container.component.html',
   styleUrls: ['./email-composer-container.component.scss']

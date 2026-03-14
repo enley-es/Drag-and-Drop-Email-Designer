@@ -5,6 +5,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { ConstantsData } from '../../constants';
 
 @Component({
+  standalone: false,
   selector: 'app-email-footer',
   templateUrl: './email-footer.component.html',
   styleUrls: ['./email-footer.component.scss']

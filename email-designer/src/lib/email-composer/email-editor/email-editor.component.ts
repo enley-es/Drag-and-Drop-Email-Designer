@@ -4,6 +4,7 @@ import { EmailElements } from '../models';
 import { sampleEmailData } from '../sample-data';
 
 @Component({
+  standalone: false,
   selector: 'app-email-editor',
   templateUrl: './email-editor.component.html',
   styleUrls: ['./email-editor.component.scss']

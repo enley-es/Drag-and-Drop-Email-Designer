@@ -5,6 +5,7 @@ import { EmailElementService } from "./email-composer/email-element.service";
 import { EmailComposerContainerComponent } from "./email-composer/email-composer-container/email-composer-container.component";
 
 @Component({
+  standalone: false,
   selector: "lib-email-designer",
   templateUrl: "./email-editor.component.html",
   styleUrls: [

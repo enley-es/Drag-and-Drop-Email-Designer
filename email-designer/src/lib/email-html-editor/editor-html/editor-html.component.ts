@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, Output, SimpleChanges } from '@angular/core';
 
 @Component({
+  standalone: false,
   selector: 'app-editor-html',
   templateUrl: './editor-html.component.html',
   styleUrls: ['./editor-html.component.scss']

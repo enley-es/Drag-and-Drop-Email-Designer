@@ -4,6 +4,7 @@ import { BlockType } from '../models';
 import { ConstantsData } from '../constants'
 
 @Component({
+  standalone: false,
   selector: 'app-email-toolbar-button',
   templateUrl: './email-toolbar-button.component.html',
   styleUrls: ['./email-toolbar-button.component.scss']

@@ -12,6 +12,7 @@ import { EmailToolbarFooterComponent } from '../email-toolbar-footer/email-toolb
 
 
 @Component({
+  standalone: false,
   selector: 'app-email-toolbar',
   templateUrl: './email-toolbar.component.html',
   styleUrls: ['./email-toolbar.component.scss']

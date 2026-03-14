@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { EmailPlainTextModule } from './email-plain-text/email-plain-text.module';
 import { EmailComposerModule } from './email-composer/email-composer.module';
 import { EmailHtmlEditorModule } from './email-html-editor/email-html-editor.module';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 
 
@@ -14,10 +14,12 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     CommonModule,
-    HttpClientModule,
     EmailPlainTextModule,
     EmailComposerModule,
     EmailHtmlEditorModule,
+  ],
+  providers: [
+    provideHttpClient(withInterceptorsFromDi()),
   ],
   exports: [
     EmailEditorComponent
